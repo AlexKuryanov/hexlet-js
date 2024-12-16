@@ -1,0 +1,36 @@
+-
+  const icons = {
+    free: [
+      {
+        name: 'robot',
+        url: './icons/robot.svg'
+      },
+      {
+        name: 'hexlet',
+        url: './icons/hexlet.svg'
+      }
+    ],
+    premium: [
+      {
+        name: 'cat',
+        url: './icons/premium/cat.svg'
+      },
+      {
+        name: 'dog',
+        url: './icons/premium/dog.svg'
+      }
+    ]
+  };
+
+doctype html
+html(lang='ru')
+  head
+    title Обучение вёрстке
+  body
+
+    each images, position in icons
+      h2= position
+      ul
+        each icon in images
+          li
+            a(href= icon.url) #{icon.name}
